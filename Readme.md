@@ -56,6 +56,12 @@ Or if you've installed cloudinate globally, you can run it from the command line
 $ cloudinate -k 'keys.js' -f 'images/**/*.jpg'
 ```
 
+## Options
+
+Cloudinate expects an object with the following keys:
+
+* files: a glob pattern of the files to upload (required, command line flag: `-f`)
+* keys: an object containing your Cloudinary `cloud_name`, `api_key` and `api_secret` (required, command line flag: `-k`)
 
 ## What does it do
 
