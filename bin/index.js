@@ -13,6 +13,8 @@ argv = argv
   .alias('f', 'files')
   .describe('f', 'Files to upload')
   .demand('f')
+  .alias('r', 'relative')
+  .describe('r', 'Generate public ids relative to this path')
   .help('h')
   .alias('h', 'help')
   .argv;
@@ -20,7 +22,8 @@ argv = argv
 // Process arguments
 var opts = {
   files: argv.files,
-  keys: require(path.join(process.cwd(), argv.keys))
+  keys: require(path.join(process.cwd(), argv.keys)),
+  relativeTo: argv.relative || ''
 };
 
 // Run module with supplied options
