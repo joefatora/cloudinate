@@ -58,10 +58,11 @@ $ cloudinate -k 'keys.js' -f 'images/**/*.jpg'
 
 ## Options
 
-Cloudinate expects an object with the following keys:
+You can pass the following options:
 
 * files: a glob pattern of the files to upload (required, command line flag: `-f`)
 * keys: an object containing your Cloudinary `cloud_name`, `api_key` and `api_secret` (required, command line flag: `-k`)
+* relativeTo: a path, public_ids will be generated relative to this path (optional, command line flag: `-r`)
 
 ## What does it do
 
